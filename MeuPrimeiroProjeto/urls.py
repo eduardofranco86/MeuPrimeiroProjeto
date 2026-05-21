@@ -18,7 +18,9 @@ from django.contrib import admin
 from django.urls import path
 from OlaDjango.views import *
 
+## Este é um olá mundo
 urlpatterns = [
+
     path('admin/', admin.site.urls),
     path('olamundo/', olamundo, name='olamundo'),
 ]
