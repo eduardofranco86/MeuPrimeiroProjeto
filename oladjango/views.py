@@ -12,7 +12,7 @@ def olamundo(request):
     return HttpResponse('Ola Mundo')
 
 
-# Pagina de teste de render
+# Mostra todo o conteúdo
 def paginaInicial(request):
     listaDeCategorias = Categorias.objects.all()
     context = {"listaDeCategorias":  listaDeCategorias}
