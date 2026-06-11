@@ -1,11 +1,12 @@
 # MeuPrimeiroProjeto
-CTRL+ALT+T
+# CTRL+ALT+T
 
-rm -rf MeuPrimeiroProjeto
 
-git clone https://github.com/eduardofranco86/MeuPrimeiroProjeto.git
+# rm -rf MeuPrimeiroProjeto
 
-cd MeuPrimeiroProjeto
+# git clone https://github.com/eduardofranco86/MeuPrimeiroProjeto.git
+
+# cd MeuPrimeiroProjeto
 
 code . 
 
