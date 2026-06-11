@@ -18,3 +18,19 @@ def paginaInicial(request):
     context = {"listaDeCategorias":  listaDeCategorias}
 
     return render(request, "base.html", context)
+
+
+def editar(request, catid):
+    catUpdate = Categorias.objects.get(pk=catid)
+    return HttpResponse('Editar categoria' +catUpdate.nome  +" id --"+str(catUpdate.id))
+
+def remover(request, catid):
+    catUpdate = Categorias.objects.get(pk=catid)
+    return HttpResponse('Remover categoria' +catUpdate.nome  +" id --"+str(catUpdate.id))
+
+
+
+
+# starta a aplicação
+# python manage.py runserver
+
