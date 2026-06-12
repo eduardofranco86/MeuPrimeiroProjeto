@@ -10,9 +10,10 @@
     
     <form method="POST" action="/editarcategoria">
         {% csrf_token %}
-        <input type="hidden" name="id_categoria" value="{{ categoria.id }}" />
-        <input type="text" name="nome_categoria" value="{{ categoria.nome }}" />
+        <input type="hidden" name="id" value="{{ categoria.id }}" />
+        <input type="text" name="nome" value="{{ categoria.nome }}" />
         <input type="submit" value="Editar" />
 </form>
+
 </body>
 </html>

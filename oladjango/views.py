@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from flask import redirect
 
 from oladjango.models import Categorias
 
@@ -21,8 +22,20 @@ def paginaInicial(request):
 
 
 def editar(request, catid):
-    catUpdate = Categorias.objects.get(pk=catid)
-    return HttpResponse('Editar categoria' +catUpdate.nome  +" id --"+str(catUpdate.id))
+    categoria = Categorias.objects.get(pk=catid)
+
+    context = {"categoria": categoria}
+    return render(request, "editarcategoria.html", context)
+
+def editarcategoria(request):
+    if request.method == "POST":
+        categoria = Categorias.objects.get(pk=request.POST["id"])
+        categoria.nome = request.POST["nome"]
+        categoria.save()
+        return redirect("/")
+    else:
+        return HttpResponse("Nenhum dado foi passado na requisição")
+
 
 def remover(request, catid):
     catUpdate = Categorias.objects.get(pk=catid)
