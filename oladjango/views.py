@@ -1,6 +1,6 @@
 from django.http import HttpResponse
-from django.shortcuts import render
-from flask import redirect
+from django.shortcuts import render, redirect
+
 
 from oladjango.models import Categorias
 

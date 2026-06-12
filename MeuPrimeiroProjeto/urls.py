@@ -25,6 +25,7 @@ urlpatterns = [
     path('olamundo/', olamundo, name='olamundo'),
     path('', paginaInicial, name='home'),
     path('editar/<int:catid>/', editar, name='editar'),
+    path('editarcategoria', editarcategoria, name='editarcategoria'),
 
     path('excluir/<int:catid>/', remover, name='excluir'),
 ]

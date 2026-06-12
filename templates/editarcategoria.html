@@ -7,12 +7,13 @@
 <body>
 
 <h1>Editar categoria</h1>
-    
+
     <form method="POST" action="/editarcategoria">
         {% csrf_token %}
         <input type="hidden" name="id" value="{{ categoria.id }}" />
         <input type="text" name="nome" value="{{ categoria.nome }}" />
-        <input type="submit" value="Editar" />
+        <br />
+        <input type="submit" value="Atualizar" />
 </form>
 
 </body>
