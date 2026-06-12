@@ -18,5 +18,6 @@ code .
 conda install git 
 
 ## Rejeitar todas as alterações do seu repositório e a atualizar para a última versão
-#git fetch origin
-#git reset --hard origin/main
+git fetch origin
+## Depois 
+git reset --hard origin/main
