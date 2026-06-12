@@ -16,3 +16,7 @@ code .
 
 ## Se o git não estiver instalado
 conda install git 
+
+## Rejeitar todas as alterações do seu repositório e a atualizar para a última versão
+git fetch origin
+git reset --hard origin/main
